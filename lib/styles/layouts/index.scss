@@ -1,0 +1,44 @@
+@import 'signInForm';
+@import 'header';
+@import 'headerLinks';
+
+.wrapper {
+  height: 100%;
+  background-color: $gray-100;
+}
+
+.main {
+  width: 100vw;
+  padding-top: $header-height;
+
+  &.app_content_root {
+    padding: 0;
+    max-height: calc(100% - #{$header-height});
+    height: calc(100% - #{$header-height});
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: $header-height;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  outline: none;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  z-index: 999;
+
+  .app_logo {
+    width: 160px;
+    height: 30px;
+    background-image: url('../img/app-logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}

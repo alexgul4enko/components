@@ -1,0 +1,15 @@
+.global_error {
+
+  & > div {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &.message > div {
+    background: $green;
+  }
+
+  &.error > div {
+    background: $red;
+  }
+}

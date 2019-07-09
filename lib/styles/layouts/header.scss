@@ -1,0 +1,19 @@
+.header_container {
+  flex:  1;
+  align-self: stretch;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+
+  .right_pannel {
+    flex: 1;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .site_logo {
+    height: 56px;
+  }
+}

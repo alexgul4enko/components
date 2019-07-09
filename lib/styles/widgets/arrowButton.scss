@@ -1,0 +1,15 @@
+.arrow_button {
+
+  &:hover {
+
+    [class^="icon-"], [class*=" icon-"] {
+      transform:  translateX(5px);
+    }
+  }
+
+  [class^="icon-"], [class*=" icon-"]  {
+    margin-left: 4px;
+    font-size: 20px;
+    transition: transform 300ms ease-in-out;
+  }
+}

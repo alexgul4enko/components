@@ -1,0 +1,279 @@
+.custom-table {
+  background: #fff;
+  box-shadow: $thumbnail-box-shadow;
+  border-radius: 4px;
+
+  .dnd_collumn {
+    padding-left: 0;
+    padding-right: 0;
+    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
+  }
+
+  .selectable_column {
+    padding-left: 0;
+    padding-right: 0;
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+  }
+
+  .form {
+    position: relative;
+    background: #fff;
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+
+  tbody td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+
+.data_table_search {
+
+  >div {
+    margin-bottom: 20px;
+  }
+}
+
+.custom_table_header {
+
+  .dnd_header_cell {
+
+    div {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .info_cell {
+    padding: 4px 12px
+  }
+
+  .info_row .info_cell .custom_table_header_actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+
+    .actions_wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: stretch;
+      transform: translateX(0);
+      @include withAnimation(transform, opacity);
+
+      &.hidden {
+        transform: translateX(-100%);
+      }
+
+      > button {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: unset;
+        width: unset;
+        padding: 6px;
+        font-size: 24px;
+
+        i {
+          color: $gray-600;
+          @include withAnimation(transform, color);
+        }
+
+        &:hover, &:active {
+          background-color: transparent !important;
+
+          i {
+            color: $font;
+            transform: scale(1.3)
+          }
+        }
+      }
+    }
+  }
+}
+
+.dnd_handler_cell {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include withAnimation(color)
+    &.disable {
+      color: $gray-600;
+    }
+  }
+}
+
+.custom_table_sotrable_button {
+  padding: 0 !important;
+  text-transform: capitalize;
+  text-align: left;
+
+  &:hover, &:active {
+    background: transparent !important;
+  }
+
+  >span:first-of-type {
+    @include withAnimation(transform)
+    i {
+       @include withAnimation(width)
+       display: inline-block;
+       position: relative;
+       overflow: hidden;
+    }
+
+    i.hidden {
+      width: 0;
+    }
+
+    &:hover, &:active {
+
+      i.hidden {
+        width: 20px;
+      }
+    }
+  }
+}
+
+.editable_row_button {
+  padding: 0 !important;
+  text-align: left;
+
+  &:hover, &:active {
+    background: transparent !important;
+
+    >span:first-of-type {
+      color: $font;
+    }
+  }
+
+  >span:first-of-type {
+    @include withAnimation(color)
+    text-transform: capitalize;
+    color: $gray-600;
+  }
+}
+
+
+
+.collapsible_row {
+
+  .collapsible_cell {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 48px;
+
+    .add_new_table_row {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 !important;
+
+      &.dnd {
+        margin-left: 40px;
+      }
+
+      &.selectable { 
+        margin-left: 50px;
+      }
+
+      &.selectable.dnd {
+        margin-left: 90px;
+      }
+
+      &:hover, &:active {
+        background: transparent !important;
+
+        >span:first-of-type {
+          color: $font;
+        }
+      }
+
+      >span:first-of-type {
+        @include withAnimation(color)
+        text-transform: capitalize;
+        color: $gray-600;
+      }
+    }
+  }
+}
+
+.collapsible_row_edit {
+  height: unset !important;
+
+  .collapsible_cell_edit {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+    height: unset !important;
+  }
+}
+
+.table_form_content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form_actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 22px;
+
+  button {
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .submit {
+
+    &:hover .loading_button_content{
+      color: inherit;
+    }
+
+    > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      align-self: stretch;
+    }
+
+    .title {
+      color: inherit;
+      margin: 0;
+    }
+  }
+}
+
+.collapsible_table_form {
+
+  &.dnd {
+    padding-left: 40px;
+  }
+
+  &.selectable { 
+    padding-left: 50px;
+  }
+
+  &.selectable.dnd {
+    padding-left: 90px;
+  }
+}
+
+
