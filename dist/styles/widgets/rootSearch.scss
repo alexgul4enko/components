@@ -1,0 +1,38 @@
+.search_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 1001;
+  height: 68px;
+  box-shadow: $thumbnail-box-shadow;
+
+  .search_menu_container {
+    @extend %content-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    >div {
+      flex: 1;
+      color: $gray-600;
+      position: relative;
+    }
+
+    .custom_autocomplite {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(100% + 16px);
+      margin-top: 0 !important;
+
+      li {
+        list-style-type: none;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    }
+  }
+}

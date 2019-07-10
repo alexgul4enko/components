@@ -1,13 +1,14 @@
 {
-  "name": "@invotra-uikit",
-  "version": "1.0.0",
+  "name": "@invotra/uiKIT",
+  "version": "1.0.1",
   "description": "UI kit library for Infotra web projects",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "build": "yarn build-js",
+    "build": "yarn build-js && yarn copy-styles",
     "build-js": "babel lib -d dist --ignore **/__tests__",
+    "copy-styles": "node copy-styles.js",
     "clean": "rimraf dist",
     "lint": "eslint lib/ --ext .jsx,.js",
     "prepublishOnly": "yarn clean && yarn build"
