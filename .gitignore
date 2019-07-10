@@ -18,4 +18,5 @@ static*
 npm-debug.log
 yarn-error.log
 
-lib
+dist
+core
