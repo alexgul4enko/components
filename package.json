@@ -1,6 +1,6 @@
 {
   "name": "@invotra/uiKIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "UI kit library for Infotra web projects",
   "directories": {
     "lib": "lib"
@@ -11,7 +11,9 @@
     "copy-styles": "node copy-styles.js",
     "clean": "rimraf lib",
     "lint": "eslint src/ --ext .jsx,.js",
-    "prepublishOnly": "yarn clean && yarn build"
+    "stylelint": "stylelint 'src/styles/**/**.scss' --syntax scss",
+    "stylelint:fix": "stylelint 'src/styles/**/**.scss' --syntax scss --fix",
+    "prepublishOnly": "yarn clean && yarn build",
   },
   "keywords": [
     "react"
