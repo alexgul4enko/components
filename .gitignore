@@ -17,3 +17,5 @@ static*
 .imagemin
 npm-debug.log
 yarn-error.log
+
+lib
