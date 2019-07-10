@@ -1,6 +1,6 @@
 {
   "name": "@invotra/uiKIT",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "UI kit library for Infotra web projects",
   "directories": {
     "lib": "lib"
@@ -21,7 +21,6 @@
   "files": [
     "LICENSE",
     "README.md",
-    "dist/",
     "lib/"
   ],
   "repository": {
