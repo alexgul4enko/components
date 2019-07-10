@@ -1,6 +1,6 @@
 {
   "name": "alexgul4enko",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "UI kit library for Infotra web projects",
   "scripts": {
     "build": "yarn build-js && yarn copy-styles",
@@ -12,6 +12,12 @@
     "stylelint:fix": "stylelint 'src/styles/**/**.scss' --syntax scss --fix",
     "prepublishOnly": "yarn clean && yarn build"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "core/",
+    "package.json"
+  ],
   "keywords": [
     "react"
   ],
