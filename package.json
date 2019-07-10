@@ -1,6 +1,6 @@
 {
-  "name": "@alexgul4enko/uiKIT",
-  "version": "1.0.7",
+  "name": "@alexgul4enko/uikit",
+  "version": "1.0.8",
   "description": "UI kit library for Infotra web projects",
   "directories": {
     "lib": "lib"
