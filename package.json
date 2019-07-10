@@ -2,9 +2,6 @@
   "name": "@alexgul4enko",
   "version": "1.0.10",
   "description": "UI kit library for Infotra web projects",
-  "directories": {
-    "core": "core"
-  },
   "scripts": {
     "build": "yarn build-js && yarn copy-styles",
     "build-js": "babel src -d core --ignore **/__tests__",
@@ -17,11 +14,6 @@
   },
   "keywords": [
     "react"
-  ],
-  "files": [
-    "LICENSE",
-    "README.md",
-    "core/"
   ],
   "repository": {
     "type": "git",
