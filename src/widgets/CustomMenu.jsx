@@ -10,9 +10,9 @@ import { withModal } from 'common/hocs'
 
 
 class MenuListComposition extends PureComponent {
-  constructor(props){
+  constructor(props) {
     super(props)
-    this.state {}
+    this.state = {}
   }
   handleClose = event => !this.state.anchorEl.contains(event.target) && this.props.setToggle(false)
 
