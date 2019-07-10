@@ -1,6 +1,6 @@
 {
-  "name": "@invotra/uiKIT",
-  "version": "1.0.5",
+  "name": "@sasha/uiKIT",
+  "version": "1.0.6",
   "description": "UI kit library for Infotra web projects",
   "directories": {
     "lib": "lib"
