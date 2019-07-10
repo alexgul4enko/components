@@ -26,7 +26,7 @@ function copyDir(input, output) {
 function copyFolderDers(folders) {
   if(!folders || !Array.isArray(folders) || !folders.length) {}
   folders.map(folder => {
-    const output = path.resolve(`lib/${folder}`)
+    const output = path.resolve(`core/${folder}`)
     const input = path.resolve(`src/${folder}`)
     if(checkAndCreateFolder(input, output)) {
       copyDir(input, output)
