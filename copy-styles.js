@@ -1,16 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 
-// function copyFileSync(source, target) {
-//   var targetFile = target
-//   if(fs.existsSync(target)) {
-//     if(fs.lstatSync(target).isDirectory()) {
-//       targetFile = path.join(target, path.basename(source))
-//     }
-//   }
-//   fs.writeFileSync(targetFile, fs.readFileSync(source))
-// }
-
 function checkAndCreateFolder(input, output) {
   if(!fs.existsSync(input)) { return false }
   if(!fs.existsSync(output)) {
@@ -36,8 +26,8 @@ function copyDir(input, output) {
 function copyFolderDers(folders) {
   if(!folders || !Array.isArray(folders) || !folders.length) {}
   folders.map(folder => {
-    const output = path.resolve(`dist/${folder}`)
-    const input = path.resolve(`lib/${folder}`)
+    const output = path.resolve(`lib/${folder}`)
+    const input = path.resolve(`src/${folder}`)
     if(checkAndCreateFolder(input, output)) {
       copyDir(input, output)
     }
