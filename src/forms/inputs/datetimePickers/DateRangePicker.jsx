@@ -27,7 +27,7 @@ export default class DateRangePicker extends Component {
     this.state = { ...(props.value || {}) }
   }
 
-  toogleCalendar = () => this.setState({ show: !this.state.show })
+  toogleCalendar = (focusedInput) => (_) => this.setState({ show: !this.state.show, focusedInput })
 
   hideCalendar = () => this.setState({ show: false })
 
@@ -79,7 +79,7 @@ export default class DateRangePicker extends Component {
               value={startDate}
               onChange={this.handleInputChange('startDate')}
               handleChange={this.handleInputChange('startDate')}
-              toogleCalendar={this.toogleCalendar}
+              toogleCalendar={this.toogleCalendar(START_DATE)}
               shrink={startDate ? true : undefined}
               onBlur={undefined}
               onFocus={undefined}
@@ -94,7 +94,7 @@ export default class DateRangePicker extends Component {
               id={this.to_id}
               onChange={this.handleInputChange('endDate')}
               handleChange={this.handleInputChange('endDate')}
-              toogleCalendar={this.toogleCalendar}
+              toogleCalendar={this.toogleCalendar(END_DATE)}
               shrink={endDate ? true : undefined}
               onBlur={undefined}
               onFocus={undefined}

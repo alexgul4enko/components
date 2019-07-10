@@ -10,7 +10,11 @@ import { withModal } from 'common/hocs'
 
 
 class MenuListComposition extends PureComponent {
-  handleClose = event => !this.anchorEl.contains(event.target) && this.props.setToggle(false)
+  constructor(props){
+    super(props)
+    this.state {}
+  }
+  handleClose = event => !this.state.anchorEl.contains(event.target) && this.props.setToggle(false)
 
   handleItemSelect = () => {
     this.props.setToggle(false)
@@ -22,14 +26,14 @@ class MenuListComposition extends PureComponent {
     return (
       <div className="custom_menu">
         <Button
-          buttonRef={node => this.anchorEl = node}
+          buttonRef={anchorEl => this.setState({ anchorEl })}
           aria-owns={active ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
           onClick={toggle}
         >
           {children}
         </Button>
-        <Popper open={active} anchorEl={this.anchorEl} transition disablePortal>
+        <Popper open={active} anchorEl={this.state.anchorEl} transition disablePortal>
           {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
