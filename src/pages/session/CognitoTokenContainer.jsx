@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { compose } from 'redux'
 import CognitoToken from './CognitoToken'
-import { withGlobalError } from '@invotra/uiKIT/errors'
+import { withGlobalError } from '../../errors'
 import { parseQueryParams } from '../../utils/queryParams'
 import connect from '../../utils/resource'
 import cognitoHOC from './session'

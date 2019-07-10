@@ -1,6 +1,6 @@
 {
   "name": "alexgul4enko",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "UI kit library for Infotra web projects",
   "scripts": {
     "build": "yarn build-js && yarn copy-styles",

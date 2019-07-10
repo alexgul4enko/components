@@ -2,7 +2,7 @@ import { createContext, Component } from 'react'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import get from 'lodash/get'
 import has from 'lodash/has'
-import connect from '@invotra/uiKIT/utils/resource'
+import connect from '../../utils/resource'
 
 const ThemeContext = createContext({ branding: {} })
 
